@@ -14,13 +14,13 @@ fetch('https://raw.githubusercontent.com/Simao12342/API/main/Product.txt')
       
 
 
-      // productElement.innerHTML = `
-      //   <div class="img-container">
-      //   <img src="${product.image}" class="product-img"/></div>
-      //   <h2>${product.name}</h2>
-      //   <p>${product.description}</p>
-      //   <p>Ціна: ${product.price} грн</p>
-      // `;
+      productElement.innerHTML = `
+        <div class="img-container">
+        <img src="${product.image}" class="product-img"/></div>
+        <h2>${product.name}</h2>
+        <p>${product.description}</p>
+        <p>Ціна: ${product.price} грн</p>
+      `;
       productsContainer.appendChild(productElement);
     });
   })
