@@ -1,7 +1,21 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+header {
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Шапка розтягується на всю ширину вікна */
+  z-index: 1000;
+  /* Забезпечує, що шапка буде над іншими елементами */
+  background-color: #fff;
+  /* Білий фон */
+  box-shadow: 0 2px 2px -2px gray;
+  Тінь для візуальної відокремленості шапки */
 
+}
+/* #343a40; */
 ul {
   padding: 0;
   list-style-type: none;
@@ -14,7 +28,7 @@ ul {
 
 .products-container {
   width: 90%;
-  margin: 0 auto;
+  margin: 50px auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -37,6 +51,7 @@ border: 1px solid rgb(53, 53, 243);
   box-shadow: 3px 3px 6px 1px rgb(53, 53, 243);
 }
 .product-item h4 {
+  margin: 15px;
   font-size: 20px;
   font-weight: bold;
 }
@@ -169,7 +184,10 @@ border: 1px solid rgb(53, 53, 243);
 .cart-list-price-section {
   font-weight: bold;
 }
-
+.cart-list-price-section {
+  display: flex;
+  justify-content: center;
+}
 .cart-list-quantity-section > input {
   width: 50px;
   padding: 5px 0;
@@ -212,4 +230,6 @@ border: 1px solid rgb(53, 53, 243);
   height: 400px; /* висота зображення - 100% від висоти слайдера */
   overflow: hidden;
   object-fit: cover; /* забезпечує, щоб зображення покривали слайд, не втрачаючи пропорції */
-}/* кінець стилей каруселі */
+}
+
+/* кінець стилей каруселі */
