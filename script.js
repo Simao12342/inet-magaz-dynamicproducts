@@ -1,8 +1,16 @@
 const getProducts = async () => {
-  const response = await fetch("https://raw.githubusercontent.com/Simao12342/API/main/Product.txt");
-  const products = await response.json();
-  return products;
+  try {
+    const response = await fetch("https://raw.githubusercontent.com/Simao12342/API/main/Product.txt");
+    if (!response.ok) {
+      throw new Error(`HTTP помилка! статус: ${response.status}`);
+    }
+    const products = await response.json();
+    return products;
+  } catch (error) {
+    console.error("Помилка при отриманні даних: ", error);
+  }
 };
+getProducts().then(products => console.log(products)).catch(error => console.error(error));
 
 const renderProducts = async () => {
   const products = await getProducts();

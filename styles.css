@@ -21,6 +21,7 @@ ul {
 }
 
 .product-item {
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +36,10 @@ border: 1px solid rgb(53, 53, 243);
   transition: all 0.3s ease;
   box-shadow: 3px 3px 6px 1px rgb(53, 53, 243);
 }
-
+.product-item h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
 .product-item > img {
   height: 200px;
   width: 200px;
@@ -43,11 +47,15 @@ border: 1px solid rgb(53, 53, 243);
 }
 
 .product-item > p {
-  text-align: left;
+  font-size: 15px;
+    margin-left: 5px;
+  margin-right: 5px;
+  text-align:left;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 5; /* number of lines to show */
   -webkit-box-orient: vertical;
+  text-align: justify;
 }
 
 .product-item-price {
@@ -59,12 +67,15 @@ border: 1px solid rgb(53, 53, 243);
 }
 
 .product-item-price > span {
+  margin-left: 5px;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
   color: #bd0404;
 }
 
 .product-item-price > button {
+  margin-right: 5px;
+  margin-bottom: 5px;
   padding: 10px;
   border: none;
   background-color: green;
@@ -108,6 +119,7 @@ border: 1px solid rgb(53, 53, 243);
 }
 
 .cart-list-titles > h4 {
+ 
   padding-bottom: 10px;
   border-bottom: 2px solid black;
 }
@@ -177,3 +189,27 @@ border: 1px solid rgb(53, 53, 243);
   margin-left: 10px;
   font-weight: bold;
 }
+/* стилі для каруселі фото */
+.carousel-container {
+  display: flex; /* використовується flexbox для центрування */
+  justify-content: center; /* центрування по горизонталі */
+  align-items: center; /* центрування по вертикалі */
+  height: 400px; /* висота контейнера - 100% від висоти вікна перегляду */
+}
+
+/* Стилі для самого слайдера */
+#myCarousel {
+  width: 100%!important; /* ширина слайдера - 80% від ширини контейнера */
+  height: 100%!important; /* висота слайдера - 30% від висоти вікна перегляду */
+
+
+}
+
+/* Стилі для зображень у слайдері */
+.carousel-inner img {
+
+  width: 100%; /* ширина зображення - 100% від ширини слайдера */
+  height: 400px; /* висота зображення - 100% від висоти слайдера */
+  overflow: hidden;
+  object-fit: cover; /* забезпечує, щоб зображення покривали слайд, не втрачаючи пропорції */
+}/* кінець стилей каруселі */

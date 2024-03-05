@@ -5,9 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+    <title>Інтернет-Магазин</title>
   </head>
   <body>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Логотип</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Головна <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Продукти</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Контакти</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Пошук" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Пошук</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+<!-- слайдер фото -->
+<div class="carousel-container">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Індикатори -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Обгортка для слайдів -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="IMG/11pray-for-ukraine.jpg" alt="Slide 1" class="d-block w-80">
+    </div>
+    <div class="carousel-item">
+      <img src="IMG/13pray-for-ukraine.jpg" alt="Slide 2" class="d-block w-80">
+    </div>
+    <div class="carousel-item">
+      <img src="IMG/14.png" alt="Slide 3" class="d-block w-80">
+    </div>
+  </div>
+
+  <!-- Кнопки управління -->
+  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Попередній</span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Наступний</span>
+  </a>
+</div>
+</div>
+<!-- кінець слайдера з фото -->
     <h1 class="main-title">Online store</h1>
     <ul class="products-container"></ul>
     <div class="cart">
@@ -24,5 +86,13 @@
       </div>
     </div>
     <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $('.carousel').carousel({
+        interval: 2000 // змініть на потрібну кількість мілісекунд (2000 мс = 2 секунди)
+    })
+</script>
   </body>
 </html>
