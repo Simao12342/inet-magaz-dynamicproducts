@@ -301,59 +301,73 @@ h5 {
 footer {
   border-top: 3px solid rgb(150, 147, 147);
 }
+/* фльтр фотопосилання */
 .image-link-container {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  /* Максимальна ширина контейнера */
 }
 
 .image-link {
   position: relative;
-  width: 17%;
-  /* або будь-який інший розмір, який вам підходить */
+  width: calc(20% - 20px);
+  /* Віднімаємо маржини, щоб утримати 3 елементи в рядку */
   margin: 10px;
-  object-fit: cover;
-  overflow: hidden;
-  border-radius: 10px;
-  /* Закруглені кути */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* Тінь для ефекту підняття */
-  transition: 0.3s;
+  border-radius: 10px;
+  /* Закруглені краї */
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .image-link img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   transition: transform 0.5s ease;
 }
 
 .image-link .overlay {
   position: absolute;
   bottom: 0;
-  background-color: #008CBA;
-  /* Колір фону оверлею */
-  color: white;
-  /* Колір тексту */
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 140, 186, 0.85);
+  /* Напівпрозорий синій колір */
+  overflow: hidden;
   width: 100%;
+  height: 0;
   transition: .5s ease;
-  opacity: 0;
-  color: white;
-  text-align: center;
-  padding: 20px;
 }
 
 .image-link:hover .overlay {
-  opacity: 0.8;
+  height: 100%;
 }
 
-.image-link:hover img {
-  transform: scale(1.1);
-  /* Ефект збільшення при наведенні */
+.image-link .text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-.text {
-  font-size: 25px;
-  /* Розмір шрифту */
+@media screen and (max-width: 768px) {
+  .image-link {
+    width: calc(50% - 20px);
+    /* 2 елементи в рядку для планшетів і мобільних */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image-link {
+    width: calc(100% - 20px);
+    /* 1 елемент в рядку для дуже малих екранів */
+  }
 }
