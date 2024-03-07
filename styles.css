@@ -3,6 +3,9 @@
     font-optical-sizing: auto;
     font-style: normal;
 }
+body {
+  background-color: #aeb1b41d !important;
+}
 ul {
   padding: 0;
   list-style-type: none;
@@ -22,7 +25,7 @@ ul {
 }
 
 .product-item {
-
+background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,9 +36,12 @@ ul {
   border-radius: 15px;
 }
 .product-item:hover {
-border: 1px solid rgb(53, 53, 243);
+  transform:scale(1.01);
+  border: 1px solid rgb(254, 254, 255);
   transition: all 0.3s ease;
-  box-shadow: 3px 3px 6px 1px rgb(53, 53, 243);
+  box-shadow: 0 4px 8px rgba(141, 138, 138, 0.812);
+      /* Тінь для ефекту підняття */
+  transition: 0.3s;
 }
 .product-item h4 {
   margin: 15px;
@@ -96,6 +102,7 @@ h5 {
 /* CART styles */
 
 .cart {
+  color: #000000;
   text-align: center;
   border-top: 2px solid #777575;
 }
@@ -126,7 +133,7 @@ h5 {
 .cart-list-titles > h4 {
  
   padding-bottom: 10px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #777575;
 }
 
 .cart-list-item-section {
@@ -293,4 +300,60 @@ h5 {
 }
 footer {
   border-top: 3px solid rgb(150, 147, 147);
+}
+.image-link-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+.image-link {
+  position: relative;
+  width: 17%;
+  /* або будь-який інший розмір, який вам підходить */
+  margin: 10px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 10px;
+  /* Закруглені кути */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Тінь для ефекту підняття */
+  transition: 0.3s;
+}
+
+.image-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-link .overlay {
+  position: absolute;
+  bottom: 0;
+  background-color: #008CBA;
+  /* Колір фону оверлею */
+  color: white;
+  /* Колір тексту */
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.image-link:hover .overlay {
+  opacity: 0.8;
+}
+
+.image-link:hover img {
+  transform: scale(1.1);
+  /* Ефект збільшення при наведенні */
+}
+
+.text {
+  font-size: 25px;
+  /* Розмір шрифту */
 }
