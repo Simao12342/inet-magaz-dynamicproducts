@@ -4,9 +4,7 @@
     font-style: normal;
 }
 body {
-    background-color: #343a40 !important;
-    color: white !important;
-
+  background-color: #aeb1b41d !important;
 }
 .navbar-nav {
     font-size: 25px;
@@ -27,29 +25,6 @@ footer {
     /* висота контейнера - 100% від висоти вікна перегляду */
 }
 
-/* Стилі для самого слайдера */
-#myCarousel {
-    width: 100% !important;
-    /* ширина слайдера - 80% від ширини контейнера */
-    height: 100% !important;
-    /* висота слайдера - 30% від висоти вікна перегляду */
-
-
-}
-
-/* Стилі для зображень у слайдері */
-.carousel-inner img {
-
-    width: 100%;
-    /* ширина зображення - 100% від ширини слайдера */
-    height: 400px;
-    /* висота зображення - 100% від висоти слайдера */
-    overflow: hidden;
-    object-fit: cover;
-    /* забезпечує, щоб зображення покривали слайд, не втрачаючи пропорції */
-}
-
-/* кінець стилей каруселі */
 /*стилі заголовку*/
 .header-container {
     border-bottom: 3px solid rgb(44, 44, 44);
@@ -98,7 +73,6 @@ h5 {
 }
 
 .container-about-us {
-    background-color: #343a40;
     color: white;
 
 }
@@ -107,11 +81,9 @@ h5 {
 }
 .container {
 
-    color: #fafafa;
-    background-color: #343a40;
+
 }
 .card-body {
-    background-color: #343a40;
 }
 .card-title {
     font-weight: bold;
